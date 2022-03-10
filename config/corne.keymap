@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 &mt {
-    tapping-term-ms = <400>;
+    tapping-term-ms = <200>;
 };
 
 / {
@@ -18,42 +18,42 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | HYPR |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | HYPR |
-// | TAB  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  | ESC  |
-// | MEH  |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | MEH  |
-//                    | LWR | SPC | ESC |   | BKSP| RET  | RSE |
+// | HYPR |  Q  |  W  |  F  |  P  |  B  |      |  J  |  L   |  U  |  Y  |  ;  | HYPR |
+// | TAB  |  A  |  R  |  S  |  T  |  G  |      |  M  |  N   |  E  |  I  |  O  | ESC  |
+// | MEH  |  Z  |  X  |  C  |  D  |  V  |      |  K  |  H   |  ,  |  .  |  /  | MEH  |
+//                    | ESC | SPC | LWR |      | RSE | RET  | BKSP|
                         bindings = <
-   &kp LA(LC(LS(LGUI))) &kp Q &kp W &kp F &kp P &kp B &kp J &kp L &kp U &kp Y &kp SEMI &kp RA(RC(RS(RGUI)))
-   &kp TAB &kp A &mt LALT R &mt LSHFT S &mt LCTRL T &kp G &kp M &mt RCTRL N &mt RSHFT E &mt RALT I &kp O &kp DEL
-   &kp LA(LC(LSHFT)) &kp Z &kp X &kp C &kp D &kp V &kp K &kp H &kp COMMA &kp DOT &kp FSLH &kp RA(RC(RSHFT))
-   &kp ESC &mt LGUI SPACE &mo 1 &mo 2 &mt RGUI RET &kp BKSP
+   &kp LA(LC(LS(LGUI))) &kp Q &kp W &kp F       &kp P          &kp B    &kp J &kp L        &kp U       &kp Y   &kp SEMI &kp RA(RC(RS(RGUI)))
+   &kp TAB              &kp A &kp R &mt LSHFT S &mt LCTRL T    &kp G    &kp M &mt RCTRL N  &mt RSHFT E &kp I   &kp O    &kp DEL
+   &kp LA(LC(LSHFT))    &kp Z &kp X &kp C       &kp D          &kp V    &kp K &kp H        &kp COMMA   &kp DOT &kp FSLH &kp RA(RC(RSHFT))
+                                    &kp ESC     &mt LGUI SPACE &mo 1    &mo 2 &mt RGUI RET &kp BKSP
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// | BT2  |    |    |    |    |    |    |    |  7  |  8  |  9  |     |    |
-// | BT1  |    |    |    |    |    |    |    |  4  |  5  |  6  |  0  |    |
-// | BTCLR|    |    |    |    |    |    |    |  1  |  2  |  3  |     |    |
-//                       |    |    |    |    |     |     |     |
+// | BT2  |     |     |     |     |     |      |    |  7  |  8  |  9  |     |    |
+// | BT1  |  =  |  -  |  '  |  [  |  ]  |      |    |  4  |  5  |  6  |  0  |    |
+// | BTCLR|     |     |     |  (  |  )  |      |    |  1  |  2  |  3  |     |    |
+//                    |     |     |     |      |    |     |     |
                         bindings = <
-   &bt BT_SEL 1 &trans    &trans    &trans   &kp LPAR &kp RPAR   &trans &kp N7   &kp N8 &kp N9 &trans &trans
-   &bt BT_SEL 0 &kp PLUS  &kp UNDER &kp DQT  &kp LBKT &kp RBKT   &trans &kp N4   &kp N5 &kp N6 &kp N0 &trans
-   &bt BT_CLR   &kp EQUAL &kp MINUS &kp APOS &kp LBRC &kp RBRC   &trans &kp N1   &kp N2 &kp N3 &trans &trans
-                              &trans &trans  &trans &trans &trans   &trans
+   &bt BT_SEL 1 &trans    &trans          &trans         &trans   &trans        &trans &kp N7       &kp N8       &kp N9 &trans &trans
+   &bt BT_SEL 0 &kp EQUAL &mt LSHFT MINUS &mt LCTRL APOS &kp LBKT &kp RBKT      &trans &mt RCTRL N4 &mt RSHFT N5 &kp N6 &kp N0 &trans
+   &bt BT_CLR   &trans    &trans          &trans         &kp LPAR &kp RPAR      &trans &kp N1       &kp N2       &kp N3 &trans &trans
+                                          &trans         &trans   &trans        &trans &trans   &trans
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | TAB  |     |     |     |     |     |   |  &  |  *  |  (  |  [  |  ]  |      |
-// | CTRL |     |     |     |     |     |   |  $  |  %  |  ^  |  )  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  !  |  @  |  #  |  {  |  }  |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | TAB  |     |     |     |     |     |      |     |  &  |  *  |  (  |     |      |
+// | CTRL |     |     |  `  |  \  |     |      |     |  $  |  %  |  ^  |  )  |      |
+// | SHFT |     |     |  ~  |  |  |     |      |     |  !  |  @  |  #  |     |      |
+//                    |     |     |     |      |     |     |     |
                         bindings = <
-   &kp  TAB  &trans &trans &trans   &trans   &trans    &trans   &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &trans    &trans
-   &kp LCTRL &trans &trans &trans   &kp BSLH &trans    &kp BSLH &kp DLLR  &kp PRCNT       &kp CARET &kp RPAR  &kp GRAVE
-   &kp LSHFT &trans &trans &trans   &kp PIPE &trans    &trans   &kp EXCL  &kp AT          &kp HASH  &trans    &kp TILDE
-                    	   &kp LGUI &trans &kp SPACE   &kp RET   &trans          &kp RALT
+   &kp  TAB  &trans &trans &trans    &trans   &trans        &trans  &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &trans    &trans
+   &kp LCTRL &trans &trans &kp GRAVE &kp BSLH &trans        &trans  &kp DLLR  &kp PRCNT       &kp CARET &kp RPAR  &trans
+   &kp LSHFT &trans &trans &kp TILDE &kp PIPE &trans        &trans  &kp EXCL  &kp AT          &kp HASH  &trans    &trans
+                    	   &trans    &trans   &trans        &trans  &trans    &trans
                         >;
                 };
         };
