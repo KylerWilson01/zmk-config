@@ -22,14 +22,14 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // | HYPR|  Q  |  W  |  F  |  P  |  B  |      |  J  |  L   |  U  |  Y  |  ;  | HYPR |
-// | TAB |  A  |  R  |  S  |  T  |  G  |      |  M  |  N   |  E  |  I  |  O  | ESC  |
+// | DEL |  A  |  R  |  S  |  T  |  G  |      |  M  |  N   |  E  |  I  |  O  | ALT  |
 // | MEH |  Z  |  X  |  C  |  D  |  V  |      |  K  |  H   |  ,  |  .  |  /  | MEH  |
 //                   | ESC | SPC | LWR |      | RSE | RET  | BKSP|
                         bindings = <
-   &kp HYPER &kp Q &kp W &kp F       &kp P          &kp B    &kp J &kp L        &kp U       &kp Y   &kp SEMI &kp HYPER
-   &kp TAB   &kp A &kp R &mt LSHFT S &mt LCTRL T    &kp G    &kp M &mt RCTRL N  &mt RSHFT E &kp I   &kp O    &kp DEL
-   &kp MEH   &kp Z &kp X &kp C       &kp D          &kp V    &kp K &kp H        &kp COMMA   &kp DOT &kp FSLH &kp MEH
-                         &kp ESC     &mt LGUI SPACE &to 0    &to 1 &mt RGUI RET &kp BKSP
+   &kp HYPER &kp Q &kp W &kp F       &kp P          &kp B       &kp J &kp L        &kp U       &kp Y   &kp SEMI &kp HYPER
+   &kp DEL   &kp A &kp R &mt LSHFT S &mt LCTRL T    &kp G       &kp M &mt RCTRL N  &mt RSHFT E &kp I   &kp O    &kp RALT
+   &kp MEH   &kp Z &kp X &kp C       &kp D          &kp V       &kp K &kp H        &kp COMMA   &kp DOT &kp FSLH &kp MEH
+                         &kp ESC     &mt LGUI SPACE &kp TAB     &to 1 &mt RGUI RET &kp BKSP
                         >;
                 };
                 lower_layer {
