@@ -29,7 +29,7 @@
    &kp HYPER &kp Q &kp W &kp F       &kp P          &kp B       &kp J &kp L        &kp U       &kp Y   &kp SEMI &kp HYPER
    &kp RALT  &kp A &kp R &mt LSHFT S &mt LCTRL T    &kp G       &kp M &mt RCTRL N  &mt RSHFT E &kp I   &kp O    &kp RALT
    &kp MEH   &kp Z &kp X &kp C       &kp D          &kp V       &kp K &kp H        &kp COMMA   &kp DOT &kp FSLH &kp MEH
-                         &kp TAB     &mt LGUI SPACE &kp ESC     &to 1 &mt RGUI RET &kp BKSP
+                         &kp ESC     &mt LGUI SPACE &kp TAB     &to 1 &mt RGUI RET &kp BKSP
                         >;
                 };
                 lower_layer {
