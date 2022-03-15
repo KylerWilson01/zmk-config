@@ -22,14 +22,14 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // | HYPR|  Q  |  W  |  F  |  P  |  B  |      |  J  |  L   |  U  |  Y  |  ;  | HYPR |
-// | DEL |  A  |  R  |  S  |  T  |  G  |      |  M  |  N   |  E  |  I  |  O  | ALT  |
+// | TAB |  A  |  R  |  S  |  T  |  G  |      |  M  |  N   |  E  |  I  |  O  | ALT  |
 // | MEH |  Z  |  X  |  C  |  D  |  V  |      |  K  |  H   |  ,  |  .  |  /  | MEH  |
 //                   | ESC | SPC | LWR |      | RSE | RET  | BKSP|
                         bindings = <
    &kp HYPER &kp Q &kp W &kp F       &kp P          &kp B       &kp J &kp L        &kp U       &kp Y   &kp SEMI &kp HYPER
-   &kp DEL   &kp A &kp R &mt LSHFT S &mt LCTRL T    &kp G       &kp M &mt RCTRL N  &mt RSHFT E &kp I   &kp O    &kp RALT
+   &kp TAB   &kp A &kp R &mt LSHFT S &mt LCTRL T    &kp G       &kp M &mt RCTRL N  &mt RSHFT E &kp I   &kp O    &kp RALT
    &kp MEH   &kp Z &kp X &kp C       &kp D          &kp V       &kp K &kp H        &kp COMMA   &kp DOT &kp FSLH &kp MEH
-                         &kp ESC     &mt LGUI SPACE &kp TAB     &to 1 &mt RGUI RET &kp BKSP
+                         &kp ESC     &mt LGUI SPACE &to 2       &to 1 &mt RGUI RET &kp BKSP
                         >;
                 };
                 lower_layer {
@@ -39,23 +39,23 @@
 // | BTCL|     |  `  |  \  |  (  |  )  |      |     |  1  |  2  |  3  |     |     |
 //                   |     |     | LWR |      | RSE |     |     |
                         bindings = <
-   &bt BT_SEL 1 &trans    &trans    &trans         &trans         &trans        &trans &kp N7       &kp N8       &kp N9 &trans &trans
-   &bt BT_SEL 0 &kp EQUAL &kp MINUS &mt LSHFT APOS &mt LCTRL LBKT &kp RBKT      &trans &mt RCTRL N4 &mt RSHFT N5 &kp N6 &kp N0 &trans
-   &bt BT_CLR   &trans    &kp GRAVE &kp BSLH       &kp LPAR       &kp RPAR      &trans &kp N1       &kp N2       &kp N3 &trans &trans
+   &bt BT_SEL 1 &none     &none     &none          &none          &none         &none &kp N7       &kp N8       &kp N9 &none  &trans
+   &bt BT_SEL 0 &kp EQUAL &kp MINUS &mt LSHFT APOS &mt LCTRL LBKT &kp RBKT      &none &mt RCTRL N4 &mt RSHFT N5 &kp N6 &kp N0 &trans
+   &bt BT_CLR   &none     &kp GRAVE &kp BSLH       &kp LPAR       &kp RPAR      &none &kp N1       &kp N2       &kp N3 &none  &trans
                                     &to 0          &trans         &to 0         &to 2  &trans   &trans
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |     |  F9 | F10 | F11 | F12 |     |      |     |  &  |  *  |  (  |     |     |
-// |     |  F5 |  F6 |  F7 |  F8 |     |      |     |  $  |  %  |  ^  |  )  |     |
-// |     |  F1 |  F2 |  F3 |  F4 |     |      |     |  !  |  @  |  #  |     |     |
+// |     |  F9 | F10 | F11 | F12 |     |      |     |     |     |     |     |     |
+// |     |  F5 |  F6 |  F7 |  F8 |     |      |     | LFT |  UP | RGT | HME |     |
+// |     |  F1 |  F2 |  F3 |  F4 |     |      |     | PDWN| DWN | PUP | END |     |
 //                   |     |     | LWR |      | RSE |     |     |
                         bindings = <
-   &none &kp F9 &kp F10 &kp F11 &kp F12 &trans        &trans  &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &trans    &trans
-   &none &kp F5 &kp F6  &kp F7  &kp F8  &trans        &trans  &kp DLLR  &kp PRCNT       &kp CARET &kp RPAR  &trans
-   &none &kp F1 &kp F2  &kp F3  &kp F4  &trans        &trans  &kp EXCL  &kp AT          &kp HASH  &trans    &trans
+   &none &kp F9 &kp F10 &kp F11 &kp F12 &none         &none   &none     &none    &none     &none    &none 
+   &none &kp F5 &kp F6  &kp F7  &kp F8  &none         &none   &kp LEFT  &kp UP   &kp RIGHT &kp HOME &none 
+   &none &kp F1 &kp F2  &kp F3  &kp F4  &none         &none   &kp PG_DN &kp DOWN &kp PG_UP &kp END  &none 
                    	    &to 0   &trans  &to 1         &to 0   &trans    &trans
                         >;
                 };
