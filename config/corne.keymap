@@ -11,13 +11,19 @@
 #define HYPER LA(LC(LS(LGUI))) 
 #define MEH   LA(LC(LSHFT)) 
 
-&mt {
-    tapping-term-ms = <200>;
-    flavor = 'tap-preferred';
-    retro-tap;
-};
-
 / {
+        behaviors {
+            hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS";
+                #binding-cells = <2>;
+                tapping-term-ms = <200>;
+                quick-tap-ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -29,9 +35,9 @@
 //                   | ESC | SPC | LWR |      | RSE | RET  | BKSP|
                         bindings = <
    &kp HYPER &kp Q &kp W &kp F       &kp P          &kp B       &kp J &kp L        &kp U       &kp Y   &kp SEMI &kp HYPER
-   &kp RALT  &kp A &kp R &mt LSHFT S &mt LCTRL T    &kp G       &kp M &mt RCTRL N  &mt RSHFT E &kp I   &kp O    &kp RALT
+   &kp RALT  &kp A &kp R &hm LSHFT S &hm LCTRL T    &kp G       &kp M &hm RCTRL N  &hm RSHFT E &kp I   &kp O    &kp RALT
    &kp MEH   &kp Z &kp X &kp C       &kp D          &kp V       &kp K &kp H        &kp COMMA   &kp DOT &kp FSLH &kp MEH
-                         &kp ESC     &mt LGUI SPACE &kp TAB     &to 1 &mt RGUI RET &kp BKSP
+                         &kp ESC     &hm LGUI SPACE &kp TAB     &to 1 &hm RGUI RET &kp BKSP
                         >;
                 };
                 lower_layer {
@@ -42,7 +48,7 @@
 //                   |     |     | LWR |      | RSE |     |     |
                         bindings = <
    &bt BT_SEL 1 &none     &none     &none          &none          &none         &none &kp N7       &kp N8       &kp N9 &none  &trans
-   &bt BT_SEL 0 &kp EQUAL &kp MINUS &mt LSHFT APOS &mt LCTRL LBKT &kp RBKT      &none &mt RCTRL N4 &mt RSHFT N5 &kp N6 &kp N0 &trans
+   &bt BT_SEL 0 &kp EQUAL &kp MINUS &hm LSHFT APOS &hm LCTRL LBKT &kp RBKT      &none &hm RCTRL N4 &hm RSHFT N5 &kp N6 &kp N0 &trans
    &bt BT_CLR   &none     &kp GRAVE &kp BSLH       &kp LPAR       &kp RPAR      &none &kp N1       &kp N2       &kp N3 &none  &trans
                                     &to 0          &trans         &to 0         &to 2  &trans   &trans
                         >;
