@@ -29,28 +29,28 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | HYPR|  Q  |  W  |  F  |  P  |  B  |      |  J  |  L   |  U  |  Y  |  ;  | HYPR |
-// | TAB |  A  |  R  |  S  |  T  |  G  |      |  M  |  N   |  E  |  I  |  O  | ALT  |
-// | MEH |  Z  |  X  |  C  |  D  |  V  |      |  K  |  H   |  ,  |  .  |  /  | MEH  |
-//                   | ESC | SPC | LWR |      | RSE | RET  | BKSP|
+// | NONE|  '  |  ,  |  .  |  P  |  Y  |      |  F  |  G  |  C  |  R  |  L  | NONE|
+// | NONE|  A  |  O  |  S  |  U  |  I  |      |  D  |  H  |  T  |  N  |  S  | NONE|
+// | NONE|  ;  |  Q  |  J  |  K  |  X  |      |  B  |  M  |  W  |  V  |  Z  | NONE|
+//                   | ESC | SPC | TAB |      |  /  | RET | BKSP|
                         bindings = <
-   &none &kp APOS    &kp COMMA  &kp DOT     &kp P          &kp Y       &kp J &kp L        &kp U       &kp Y   &kp SEMI &kp HYPER
-   &none &hm LMETA A &hm LALT O &hm LSHFT S &hm LCTRL T    &kp I       &kp M &hm RCTRL N  &hm RSHFT E &kp I   &kp O    &kp RALT
-   &none &kp SEMI    &kp Q      &kp J       &kp K          &kp X       &kp K &kp H        &kp COMMA   &kp DOT &kp FSLH &kp MEH
-                     &lt 1 ESC     &hm LGUI SPACE &kp TAB     &to 1 &hm RGUI RET &kp BKSP
+   &none &kp APOS     &kp COMMA   &kp DOT      &kp P        &kp Y            &kp F       &kp G        &kp C        &kp R        &kp L        &none
+   &none &hm LMETA A  &hm LALT O  &hm LSHFT S  &hm LCTRL T  &kp I            &kp D       &hm LCTRL H  &hm LSHFT T  &hm LALT N   &hm LMETA S  &none
+   &none &kp SEMI     &hm RALT Q  &kp J        &kp K        &kp X            &kp B       &kp M        &kp W        &hm RALT V   &kp Z        &none
+                                  &lt 1 ESC    &lt 1 SPACE  &lt 1 TAB        &lt 1 FSLH  &lt 1 RET    &lt 1 BKSP
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // | BT2 |     |     |     |     |     |      |     |  7  |  8  |  9  |     |     |
-// | BT1 |  =  |  -  |  '  |  [  |  ]  |      |     |  4  |  5  |  6  |  0  |     |
-// | BTCL|     |  `  |  \  |  (  |  )  |      |     |  1  |  2  |  3  |     |     |
-//                   |     |     | LWR |      | RSE |     |     |
+// | BT1 | META| LALT| SHFT| CTRL|     |      |     |  4  |  5  |  6  |  0  |     |
+// | BTCL|     | RALT|     |     |     |      |     |  1  |  2  |  3  |     |     |
+//                   |     |     |     |      | RSE |     |     |
                         bindings = <
-   &bt BT_SEL 1 &none     &none     &none          &none          &none         &none &kp N7       &kp N8       &kp N9 &none  &trans
-   &bt BT_SEL 0 &kp EQUAL &kp MINUS &hm LSHFT APOS &hm LCTRL LBKT &kp RBKT      &none &hm RCTRL N4 &hm RSHFT N5 &kp N6 &kp N0 &trans
-   &bt BT_CLR   &none     &kp GRAVE &kp BSLH       &kp LPAR       &kp RPAR      &none &kp N1       &kp N2       &kp N3 &none  &trans
-                                    &to 0          &trans         &to 0         &to 2  &trans   &trans
+   &bt BT_SEL 1 &none     &none     &none      &none      &none         &none  &kp N7  &kp N8  &kp N9 &none  &none
+   &bt BT_SEL 0 &kp LMETA &kp LALT  &kp LSHFT  &kp LCTRL  &kp RBKT      &none  &kp N4  &kp N5  &kp N6 &none  &none
+   &bt BT_CLR   &none     &kp RALT  &none      &none      &none         &none  &kp N1  &kp N2  &kp N3 &none  &none
+                                    &none      &none      &none         &none  &kp N0   &none
                         >;
                 };
 
