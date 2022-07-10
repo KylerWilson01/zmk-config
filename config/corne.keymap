@@ -35,7 +35,7 @@
 //                   | ESC | SPC | TAB |      |  /  | RET | BKSP|
                         bindings = <
    &none &kp APOS     &kp COMMA   &kp DOT      &kp P        &kp Y            &kp F       &kp G        &kp C        &kp R        &kp L        &none
-   &none &hm LMETA A  &hm LALT O  &hm LSHFT S  &hm LCTRL T  &kp I            &kp D       &hm LCTRL H  &hm LSHFT T  &hm LALT N   &hm LMETA S  &none
+   &none &hm LMETA A  &hm LALT O  &hm LSHFT E  &hm LCTRL U  &kp I            &kp D       &hm LCTRL H  &hm LSHFT T  &hm LALT N   &hm LMETA S  &none
    &none &kp SEMI     &hm RALT Q  &kp J        &kp K        &kp X            &kp B       &kp M        &kp W        &hm RALT V   &kp Z        &none
                                   &lt 2 ESC    &lt 1 SPACE  &kp TAB          &kp FSLH    &lt 3 RET    &kp BKSP
                         >;
