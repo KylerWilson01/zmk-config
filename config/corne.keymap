@@ -34,9 +34,9 @@
 // | NONE|  ;  |  Q  |  J  |  K  |  X  |      |  B  |  M  |  W  |  V  |  Z  | NONE|
 //                   | ESC | SPC | TAB |      |  /  | RET | BKSP|
                         bindings = <
-   &none &kp APOS     &kp COMMA   &kp DOT      &kp P        &kp Y            &kp F       &kp G        &kp C        &kp R        &kp L        &none
-   &none &hm LMETA A  &hm LALT O  &hm LSHFT E  &hm LCTRL U  &kp I            &kp D       &hm LCTRL H  &hm LSHFT T  &hm LALT N   &hm LMETA S  &none
-   &none &kp SEMI     &hm RALT Q  &kp J        &kp K        &kp X            &kp B       &kp M        &kp W        &hm RALT V   &kp Z        &none
+   &none &kp Q        &kp W       &kp E        &kp R        &kp T            &kp Y       &kp U        &kp I        &kp O        &kp P        &none
+   &none &hm LMETA A  &hm LALT S  &hm LSHFT D  &hm LCTRL F  &kp G            &kp H       &hm LCTRL J  &hm LSHFT K  &hm LALT L   &hm LMETA S  &none
+   &none &kp Z        &hm RALT X  &kp C        &kp V        &kp B            &kp N       &kp M        &kp COMMA        &hm RALT DOT   &kp FSLH        &none
                                   &lt 2 ESC    &lt 1 SPACE  &kp TAB          &kp FSLH    &lt 3 RET    &kp BKSP
                         >;
                 };
