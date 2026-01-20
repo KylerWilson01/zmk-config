@@ -28,7 +28,7 @@
    &none &kp APOS     &kp COMMA   &kp DOT      &kp P        &kp Y            &kp F       &kp G        &kp C        &kp R        &kp L        &none
    &none &hml LMETA A  &hml LALT O  &hml LSHFT E  &hml LCTRL U  &kp I            &kp D       &hmr LCTRL H  &hmr LSHFT T  &hmr LALT N   &hmr LMETA S  &none
    &none &kp SEMI     &hml RALT Q  &kp J        &kp K        &kp X            &kp B       &kp M        &kp W        &hmr RALT V   &kp Z        &none
-                                  &lt 2 ESC    &lt 1 SPACE  &kp TAB          &kp 5 FSLH    &lt 3 RET    &lt 4 BSPC
+                                  &lt 2 ESC    &lt 1 SPACE  &kp TAB          &lt 5 FSLH    &lt 3 RET    &lt 4 BSPC
                         >;
                 };
                 num_pad {
