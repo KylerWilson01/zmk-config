@@ -16,5 +16,5 @@
                 quick-tap-ms = <0>;
                 bindings = <&kp>, <&kp>;
             };
-        };
+	};
 };
