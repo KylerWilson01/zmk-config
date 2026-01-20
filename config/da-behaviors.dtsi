@@ -1,0 +1,20 @@
+/ {
+        behaviors {
+            hml: homerow_mods_left {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <250>;
+                quick-tap-ms = <0>;
+                bindings = <&kp>, <&kp>;
+            };
+            hmr: homerow_mods_right {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <250>;
+                quick-tap-ms = <0>;
+                bindings = <&kp>, <&kp>;
+            };
+        };
+};
