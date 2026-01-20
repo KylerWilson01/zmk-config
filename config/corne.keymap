@@ -37,7 +37,7 @@
    &none &kp APOS     &kp COMMA   &kp DOT      &kp P        &kp Y            &kp F       &kp G        &kp C        &kp R        &kp L        &none
    &none &hm LMETA A  &hm LALT O  &hm LSHFT E  &hm LCTRL U  &kp I            &kp D       &hm LCTRL H  &hm LSHFT T  &hm LALT N   &hm LMETA S  &none
    &none &kp SEMI     &hm RALT Q  &kp J        &kp K        &kp X            &kp B       &kp M        &kp W        &hm RALT V   &kp Z        &none
-                                  &lt 2 ESC    &lt 1 SPACE  &kp TAB          &kp FSLH    &lt 3 RET    &lt 4 BKSP
+                                  &lt 2 ESC    &lt 1 SPACE  &kp TAB          &kp 5 FSLH    &lt 3 RET    &lt 4 BKSP
                         >;
                 };
                 num_pad {
@@ -61,7 +61,7 @@
 //                   |     |     | LWR |      | RSE |     |     |
                         bindings = <
    &none  &none     &none     &none      &none      &none         &none      &kp F7   &kp F8  &kp F9  &kp F12  &none 
-   &none  &kp LMETA &kp LALT  &kp LSHFT  &kp LCTRL  &none         &none      &kp F4   &kp F5  &kp F6  &kp F11  &none 
+   &none  &kp LMETA &kp LALT  &kp LSHFT  &kp LCTRL  &none         &kp CAPS   &kp F4   &kp F5  &kp F6  &kp F11  &none 
    &none  &none     &kp RALT  &none      &none      &none         &none      &kp F1   &kp F2  &kp F3  &kp F10  &none 
                               &trans     &none      &none         &kp PSCRN  &kp RET  &none
                         >;
@@ -90,6 +90,19 @@
    &none  &kp C_PREV &kp C_VOL_UP &kp C_VOL_DN &kp C_NEXT &none         &none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LMETA  &none
    &none  &none      &none        &none        &none      &none         &none  &none      &none      &kp RALT  &none     &none
                                   &none        &kp C_PP   &none         &none  &none      &trans
+                        >;
+                };
+                arrows {
+// -----------------------------------------------------------------------------------------
+// |     |  F9 | F10 | F11 | F12 |     |      |     |     |     |     |     |     |
+// |     |  F5 |  F6 |  F7 |  F8 |     |      |     | LFT |  UP | RGT | HME |     |
+// |     |  F1 |  F2 |  F3 |  F4 |     |      |     | PDWN| DWN | PUP | END |     |
+//                   |     |     | LWR |      | RSE |     |     |
+                        bindings = <
+   &none  &none      &none        &none        &none      &none         &none  &none      &none      &none     &none     &none
+   &none  &kp UP     &kp LEFT     &kp RIGHT    &kp DOWN   &none         &none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LMETA  &none
+   &none  &none      &none        &none        &none      &none         &none  &none      &none      &kp RALT  &none     &none
+                                  &none        &none      &none         &none  &none      &trans
                         >;
                 };
 
