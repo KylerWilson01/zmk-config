@@ -13,13 +13,20 @@
 
 / {
         behaviors {
-            hm: homerow_mods {
+            hml: homerow_mods_left {
                 compatible = "zmk,behavior-hold-tap";
-                label = "HOMEROW_MODS";
                 #binding-cells = <2>;
+                flavor = "tap-preferred";
                 tapping-term-ms = <250>;
                 quick-tap-ms = <0>;
+                bindings = <&kp>, <&kp>;
+            };
+            hmr: homerow_mods_right {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
                 flavor = "tap-preferred";
+                tapping-term-ms = <250>;
+                quick-tap-ms = <0>;
                 bindings = <&kp>, <&kp>;
             };
         };
@@ -35,8 +42,8 @@
 //                   | ESC | SPC | TAB |      |  /  | RET | BKSP|
                         bindings = <
    &none &kp APOS     &kp COMMA   &kp DOT      &kp P        &kp Y            &kp F       &kp G        &kp C        &kp R        &kp L        &none
-   &none &hm LMETA A  &hm LALT O  &hm LSHFT E  &hm LCTRL U  &kp I            &kp D       &hm LCTRL H  &hm LSHFT T  &hm LALT N   &hm LMETA S  &none
-   &none &kp SEMI     &hm RALT Q  &kp J        &kp K        &kp X            &kp B       &kp M        &kp W        &hm RALT V   &kp Z        &none
+   &none &hml LMETA A  &hml LALT O  &hml LSHFT E  &hml LCTRL U  &kp I            &kp D       &hmr LCTRL H  &hmr LSHFT T  &hmr LALT N   &hmr LMETA S  &none
+   &none &kp SEMI     &hml RALT Q  &kp J        &kp K        &kp X            &kp B       &kp M        &kp W        &hmr RALT V   &kp Z        &none
                                   &lt 2 ESC    &lt 1 SPACE  &kp TAB          &kp 5 FSLH    &lt 3 RET    &lt 4 BKSP
                         >;
                 };
