@@ -1,0 +1,39 @@
+sysb {
+// -----------------------------------------------------------------------------------------
+// |     |  F9 | F10 | F11 | F12 |     |      |     |     |     |     |     |     |
+// |     |  F5 |  F6 |  F7 |  F8 |     |      |     | LFT |  UP | RGT | HME |     |
+// |     |  F1 |  F2 |  F3 |  F4 |     |      |     | PDWN| DWN | PUP | END |     |
+//                   |     |     | LWR |      | RSE |     |     |
+        bindings = <
+   &none  &none     &none      &none      &none     &none         &none  &none      &none      &none     &none     &none
+   &none  &kp PIPE  &kp GRAVE  &kp LPAR   &kp RPAR  &none         &none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LMETA  &none
+   &none  &none     &none      &kp LBKT   &kp RBKT  &none         &none  &none      &none      &kp RALT  &none     &none
+                               &none      &none     &none         &none  &trans     &none
+        >;
+};
+media {
+// -----------------------------------------------------------------------------------------
+// |     |  F9 | F10 | F11 | F12 |     |      |     |     |     |     |     |     |
+// |     |  F5 |  F6 |  F7 |  F8 |     |      |     | LFT |  UP | RGT | HME |     |
+// |     |  F1 |  F2 |  F3 |  F4 |     |      |     | PDWN| DWN | PUP | END |     |
+//                   |     |     | LWR |      | RSE |     |     |
+        bindings = <
+   &none  &none      &none        &none        &none      &none         &none  &none      &none      &none     &none     &none
+   &none  &kp C_PREV &kp C_VOL_UP &kp C_VOL_DN &kp C_NEXT &none         &none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LMETA  &none
+   &none  &none      &none        &none        &none      &none         &none  &none      &none      &kp RALT  &none     &none
+                                  &none        &kp C_PP   &none         &none  &none      &trans
+        >;
+};
+arrows {
+// -----------------------------------------------------------------------------------------
+// |     |  F9 | F10 | F11 | F12 |     |      |     |     |     |     |     |     |
+// |     |  F5 |  F6 |  F7 |  F8 |     |      |     | LFT |  UP | RGT | HME |     |
+// |     |  F1 |  F2 |  F3 |  F4 |     |      |     | PDWN| DWN | PUP | END |     |
+//                   |     |     | LWR |      | RSE |     |     |
+        bindings = <
+   &none  &none    &none    &none  &none      &none         &none  &none      &none      &none     &none     &none
+   &none  &kp LEFT &kp DOWN &kp UP &kp RIGHT  &none         &none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LMETA &none
+   &none  &none    &none    &none  &none      &none         &none  &none      &none      &kp RALT  &none     &none
+                            &none  &none      &none         &trans &none      &none
+        >;
+};

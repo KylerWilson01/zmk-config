@@ -25,77 +25,13 @@
 // | NONE|  ;  |  Q  |  J  |  K  |  X  |      |  B  |  M  |  W  |  V  |  Z  | NONE|
 //                   | ESC | SPC | TAB |      |  /  | RET | BKSP|
                         bindings = <
-   &none &kp APOS     &kp COMMA   &kp DOT      &kp P        &kp Y            &kp F       &kp G        &kp C        &kp R        &kp L        &none
-   &none &hml LMETA A  &hml LALT O  &hml LSHFT E  &hml LCTRL U  &kp I            &kp D       &hmr LCTRL H  &hmr LSHFT T  &hmr LALT N   &hmr LMETA S  &none
+   &none &kp APOS     &kp COMMA    &kp DOT      &kp P        &kp Y            &kp F       &kp G        &kp C        &kp R         &kp L        &none
+   &none &hml LMETA A &hml LALT O  &hml LSHFT E &hml LCTRL U &kp I            &kp D       &hmr LCTRL H &hmr LSHFT T &hmr LALT N   &hmr LMETA S &none
    &none &kp SEMI     &hml RALT Q  &kp J        &kp K        &kp X            &kp B       &kp M        &kp W        &hmr RALT V   &kp Z        &none
-                                  &lt 2 ESC    &lt 1 SPACE  &kp TAB          &lt 5 FSLH    &lt 3 RET    &lt 4 BSPC
+                                   &lt 2 ESC    &lt 1 SPACE  &kp TAB          &lt 5 FSLH  &lt 3 RET    &lt 4 BSPC
                         >;
                 };
-                num_pad {
-// -----------------------------------------------------------------------------------------
-// | BT2 |     |     |     |     |     |      |     |  7  |  8  |  9  |     |     |
-// | BT1 | META| LALT| SHFT| CTRL|     |      |     |  4  |  5  |  6  |     |     |
-// | BTCL|     | RALT|     |     |     |      |     |  1  |  2  |  3  |     |     |
-//                   |     |     |     |      |  \  |  0  |  .  |
-                        bindings = <
-   &bt BT_SEL 1 &none     &none     &none      &none      &none         &kp PLUS   &kp N7  &kp N8  &kp N9 &kp STAR   &none
-   &bt BT_SEL 0 &kp LMETA &kp LALT  &kp LSHFT  &kp LCTRL  &none         &kp MINUS  &kp N4  &kp N5  &kp N6 &kp FSLH   &none
-   &bt BT_CLR   &none     &kp RALT  &none      &none      &none         &kp EQUAL  &kp N1  &kp N2  &kp N3 &kp PRCNT  &none
-                                    &none      &none      &none         &kp BSLH   &kp N0  &kp DOT
-                        >;
-                };
-                funct {
-// -----------------------------------------------------------------------------------------
-// |     |  F9 | F10 | F11 | F12 |     |      |     |     |     |     |     |     |
-// |     |  F5 |  F6 |  F7 |  F8 |     |      |     | LFT |  UP | RGT | HME |     |
-// |     |  F1 |  F2 |  F3 |  F4 |     |      |     | PDWN| DWN | PUP | END |     |
-//                   |     |     | LWR |      | RSE |     |     |
-                        bindings = <
-   &none  &none     &none     &none      &none      &none         &none      &kp F7   &kp F8  &kp F9  &kp F12  &none 
-   &none  &kp LMETA &kp LALT  &kp LSHFT  &kp LCTRL  &none         &kp CAPS   &kp F4   &kp F5  &kp F6  &kp F11  &none 
-   &none  &none     &kp RALT  &none      &none      &none         &none      &kp F1   &kp F2  &kp F3  &kp F10  &none 
-                              &trans     &none      &none         &kp PSCRN  &kp RET  &none
-                        >;
-                };
-                sysb {
-// -----------------------------------------------------------------------------------------
-// |     |  F9 | F10 | F11 | F12 |     |      |     |     |     |     |     |     |
-// |     |  F5 |  F6 |  F7 |  F8 |     |      |     | LFT |  UP | RGT | HME |     |
-// |     |  F1 |  F2 |  F3 |  F4 |     |      |     | PDWN| DWN | PUP | END |     |
-//                   |     |     | LWR |      | RSE |     |     |
-                        bindings = <
-   &none  &none     &none      &none      &none     &none         &none  &none      &none      &none     &none     &none
-   &none  &kp PIPE  &kp GRAVE  &kp LPAR   &kp RPAR  &none         &none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LMETA  &none
-   &none  &none     &none      &kp LBKT   &kp RBKT  &none         &none  &none      &none      &kp RALT  &none     &none
-                               &none      &none     &none         &none  &trans     &none
-                        >;
-                };
-                media {
-// -----------------------------------------------------------------------------------------
-// |     |  F9 | F10 | F11 | F12 |     |      |     |     |     |     |     |     |
-// |     |  F5 |  F6 |  F7 |  F8 |     |      |     | LFT |  UP | RGT | HME |     |
-// |     |  F1 |  F2 |  F3 |  F4 |     |      |     | PDWN| DWN | PUP | END |     |
-//                   |     |     | LWR |      | RSE |     |     |
-                        bindings = <
-   &none  &none      &none        &none        &none      &none         &none  &none      &none      &none     &none     &none
-   &none  &kp C_PREV &kp C_VOL_UP &kp C_VOL_DN &kp C_NEXT &none         &none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LMETA  &none
-   &none  &none      &none        &none        &none      &none         &none  &none      &none      &kp RALT  &none     &none
-                                  &none        &kp C_PP   &none         &none  &none      &trans
-                        >;
-                };
-                arrows {
-// -----------------------------------------------------------------------------------------
-// |     |  F9 | F10 | F11 | F12 |     |      |     |     |     |     |     |     |
-// |     |  F5 |  F6 |  F7 |  F8 |     |      |     | LFT |  UP | RGT | HME |     |
-// |     |  F1 |  F2 |  F3 |  F4 |     |      |     | PDWN| DWN | PUP | END |     |
-//                   |     |     | LWR |      | RSE |     |     |
-                        bindings = <
-   &none  &none      &none        &none        &none      &none         &none  &none      &none      &none     &none     &none
-   &none  &kp UP     &kp LEFT     &kp RIGHT    &kp DOWN   &none         &none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LMETA  &none
-   &none  &none      &none        &none        &none      &none         &none  &none      &none      &kp RALT  &none     &none
-                                  &none        &none      &none         &trans  &none      &none
-                        >;
-                };
-
+                        #include "right-layers.dtsi"
+                        #include "left-layers.dtsi"
         };
 };
