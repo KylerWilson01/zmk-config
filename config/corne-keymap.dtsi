@@ -13,6 +13,10 @@
 #define HYPER LA(LC(LS(LGUI))) 
 #define MEH   LA(LC(LSHFT)) 
 
+&soft_off {
+    hold-time-ms = <3000>; // Only turn off it the key is held for 5 seconds or longer.
+};
+
 / {
 
         keymap {
